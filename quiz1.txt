@@ -1,0 +1,335 @@
+1. Question
+You need to import 45 Excel files to Power BI Desktop. All these files are in a unique desktop local folder and share the same structure. You want to import all these Excel files into a single table. Which of the following would help you in achieving the goal?
+•	 A. Adding the folder data source; using the Append Queries command
+•	 B. Adding the folder data source; using the Combine Files Command
+•	 C. Adding every single file to the model and then using Merge Query Command
+•	 D. Adding the MS Excel Data Source; selecting all files of the folder
+•	 E. Adding a folder data source and using the Merge Queries Command
+B. Adding the folder data source; using the Combine Files Command
+•	Adding the Folder Data Source: This step allows Power BI to access all files within the specified folder, which is essential since you have multiple files to import.
+•	Using the Combine Files Command: This command is specifically designed to handle multiple files with the same structure. When you use this command, Power BI automatically combines the data from all the files into a single table. It also allows you to define transformations that can be applied uniformly across all files, ensuring consistency in the resulting dataset.
+
+2. Question
+You have a 200 GB data warehouse that has data consolidated from several applications and runs on SQL Server 2017 Enterprise Edition. You notice that with your reports, there is a default limitation of eight daily refreshes. Your manager asks you to ensure that the reports are never more outdated than 1 hour. Which of the following can help you in achieving the same?
+•	 A. Building an application for monitoring the changes in the database and pushing them out utilizing the real-time streaming API
+•	 B. Migrating the content to Power BI Premium
+•	 C. Adding an SSAS tabular layer on top and enabling the Live connections
+•	 D. Convert to DirectQuery to access the data warehouse
+3. Question
+Why is it advised to avoid the NULL values in the numeric column?
+•	 A. DAX expression having SUM function on such data will provide incorrect results
+•	 B. DAX expression having MAX function on such data will provide incorrect results
+•	 C. DAX expression having an AVERAGE function on such data will provide incorrect results
+•	 D. DAX Expressions cant be applied if a numeric column has one or multiple NULL values
+•	 E. All the above									
+
+4. Question
+Consider the following table:
+ 
+After you pivot the columns, the table appears as shown below:
+ 
+As you can see, there is an Error in the 3rd row. How would you fix this error? The solution needs to preserve all the data.
+•	 A. For the key column, use Duplicate Values
+•	 B. Rename column3
+•	 C. Use Remove Errors for Column3
+•	 D. Modify the Data Type of the Value Column
+•	 E. Change the Aggregate Value Function of the Pivot
+•	Changing the Aggregate Value Function of the Pivot is the right answer. While using the Pivot feature, you need to take care of the Aggregate Value Functions shown in the Advanced options; if you are interested in preserving all duplicated values, dont choose the Sum option:
+•	 
+Option A is incorrect. Using duplicate values wont help in resolving the issue.
+Option B is incorrect. Renaming the column wont help in resolving the issue.
+Option C is incorrect. Using Remove Error is not the correct choice.
+Option D is incorrect. Modifying the Data Type of the Value column won‘t help in resolving the issue.
+Option E is correct. Changing the Aggregate Value Function of the Pivot is the right answer. While using the Pivot feature, you need to take care of the Aggregate Value Functions.
+5. Question
+Which of the following are the valid reasons to design your data model as a star schema?
+•	 A. It makes it clear to the end-users or the report builders which business attributes or entities they can slice and dice by
+•	 B. Performance as filtering on dimension rows, which are fewer, is generally faster than filtering directly on a larger fact table
+•	 C. Star Schema minimizes data redundancy by avoiding the repetition of data values as much as possible
+•	 D. Only Models designed with Star Schema can be published to Power BI service
+•	 E. It permits one to many relationships, which is the most recommended relationship type in Power BI, between the tables
+•	 F. Having a Date dimension is a recommended practice methodology to perform time intelligence in Power BI
+
+6. Question
+Consider the statement below.
+Row Level Security cant be applied in Power BI Desktop while connecting via a Live connection to Analysis Services, these need to be set within the AS model.
+•	 A. True
+•	 B. False
+You can configure Row-Level Security for the data models imported in Power BI through Power BI Desktop. It is also possible to configure Row Level Security (RLS) on the datasets that use DirectQuery, such as SQL Server. But for Analysis Services or Azure Analysis Services live connections, Row-level security is configured within the model, not Power BI Desktop. The AS models hold RLS roles already that can be used by Power BI via a Live connection.
+
+7. Question
+You need to write a measure that will calculate the ratio of a month of sales in a year. Which of the following function can be used for the purpose?
+•	 A. FILTER
+•	 B. ALL
+•	 C. ENDOFYEAR
+•	 D. WHOLEYEAR
+•	 E. FIRSTDATE
+ALL is the DAX function that can be used to calculate the ratio of a month of sales in a year. ALL is the function that returns all the values in a column or all the rows in a table by removing or ignoring any applied filter. This function is used to clear the filters and make calculations on all the rows in a table. In the given case, ALL function will remove the filter applied on Month and will calculate the ratio.
+8. Question
+Can you create a relationship between two columns having different DATA TYPE?
+•	 A. Yes, but the cardinality of the relationship needs to set as one to many
+•	 B. Yes, but the cardinality of the relationship needs to set as many to many
+•	 C. Yes, the latest versions of Power BI Desktops fully support creating relationships between such columns
+•	 D. No, the columns in a relationship need to share the same data type
+It is not possible to create a relationship between the columns that have different data types. Both columns in the relationship need to share the same data type.
+9. Question
+You need to configure a Gauge chart. Where would you set the goal for this?
+•	 A. Format Settings
+•	 B. Power Query
+•	 C. Calculated Column
+•	 D. DAX Expression
+•	In the Gauge chart, it is possible to set Maximum, Minimum, and Target values manually from the Format pane.
+•	 
+•	 
+Option A is correct. Format Settings is the right option to set the goal in the Gauge chart.
+Option B is incorrect. Format Settings, not Power Query, is the right option to set the goal in the Gauge chart.
+Option C is incorrect. Format Settings, not Calculated Column, is the right option to set the goal in the Gauge chart.
+Option D is incorrect. Format Settings, not DAX Expression, is the right option to set the goal in the Gauge chart.
+
+10. Question
+There is a table Registrations that have the Registration data for Ph.D scholars from scholars throughout the world. The below table shows the sample dataset:
+Country Year No_of_registrations
+US 2020 500
+India 2020 350
+UK 2020 450
+New Zealand 2020 550
+You try to develop a map to demonstrate the Registrations by Country, but you notice that the map does not work. How would you fix the map visualization?
+•	 A. By adding a column that has longitude and latitude
+•	 B. Choose the Country field and change the data category from the Modeling tab
+•	 C. Choose the Country field and change the data type from the Modeling tab
+•	 D. Create another table named Area and make a relationship between Area and Registrations Tables
+In the Data View or report View, You should specify or define the data category for a  field or column to make Power BI Desktop know how to treat the values of the column when in a visualization.
+11. Question
+You need to create a histogram with a fixed number of bins in Power BI. Below are the few steps (given in improper sequence) that you need for creating the histogram.
+a. Choose New Group
+b. Enter the bin count
+c. Choose the clustered column chart icon on the visualization Pane
+d. In the Fields Pane, right-click the data field that you need to analyze
+e. Set the Group type option to Bin and Bin Type option to Number of bins
+f. Drag the new Field (Buckets) into the axis of your chart and apply count measure on values.
+Choose the right sequence of the steps that you will follow. [Build the suitable visualization type first]
+•	 A. a-b-c-d-e-f
+•	 B. a-c-b-d-e-f
+•	 C. a-c-b-e-d-f
+•	 D. c-d-a-e-b-f
+•	 E. c-a-d-e-b-f
+•	 F. c-a-d-b-e-f
+Here’s the breakdown:
+1.	c. Choose the clustered column chart icon on the visualization Pane: This sets the foundation for the histogram visualization.
+2.	d. In the Fields Pane, right-click the data field that you need to analyze: This selects the data you want to analyze for the histogram.
+3.	a. Choose New Group: This initiates the process of creating bins for your data.
+4.	e. Set the Group type option to “Bin” and Bin Type option to “Number of bins”: This configures the grouping to create bins based on the specified number of bins.
+5.	b. Enter the bin count: This defines the exact number of bins you want to create for your histogram.
+6.	f. Drag the new Field (Buckets) into the axis of your chart and apply count measure on values: This places the binned data on the x-axis and creates the frequency counts for each bin, forming the histogram.
+12. Question
+Consider the statement below.
+The nodes in a decomposition tree (the fields through which the metric is analyzed by in the visuals) are fixed and can‘t be modified by the end-users viewing the report.
+•	 A. True
+•	 B. False
+By default, the nodes can be added or removed by the end-users to customize their data exploration. But if needed, you can lock the nodes by clicking on the padlock icon available next to the title. AI splits are also flexible in the context. For example, if you cross filter the decomposition tree visual with another one, it will provide the lowest/highest node in that context being filtered. You can choose the lightbulb icon in the visual for reverting it back to a non-AI node and it will lose this context sensitivity.
+13. Question
+Which of the following reserved parameters respectively configure the start and end of where Incremental refresh should happen?
+•	 A. Start and End parameters
+•	 B. StartRange and EndRange parameters
+•	 C. RangeStart and RangeEnd parameters
+•	 D. RefreshStart and RefreshEnd parameters
+•	 E. StartRefresh and EndRefresh parameters
+Option A is incorrect. There are no such reserved parameters like Start and End in Incremental Refresh.
+Option B is incorrect. There are no such reserved parameters like StartRange and EndRange in Incremental Refresh. Instead, they are RangeStart and RangeEnd.
+Option C is correct. RangeStart and RangeEnd parameters are used in Incremental Refresh to configure the start and end of where Incremental refresh should happen.
+Option D is incorrect. There are no such reserved parameters like RefreshStart and RefreshEnd in Incremental Refresh.
+Option E is incorrect. There are no such reserved parameters like StartRefresh and EndRefresh in Incremental Refresh.
+14. Question
+Your company is planning to utilize the Power BI Service to get multiple visualizations from data stored in a custom application.
+The developers ask to push the data into the Power BI Service from the custom app.
+How would you ensure this task?
+•	 A. Go to Office 365 Admin portal and register a web application
+•	 B. Go to app.powerbi.com and build an empty report
+•	 C. Go to tenant settings from the Power BI admin portal and set the API permissions
+•	 D. Go to dev.powerbi.com/apps and register an application
+1st step you need to perform is to register a new application and choose the Power BI APIs that your app needs. This task can be achieved in 2 ways: From the Azure Portal and from the Power BI Application Registration Tool.
+Option A is incorrect. Go to Office 365 Admin portal and register a web application is not the right solution to ensure the given task.
+Option B is incorrect. Go to app.powerbi.com and build an empty report is not the right solution to ensure the given task.
+Option C is incorrect. Go to tenant settings from the Power BI admin portal and set the API permissions is not the right solution to ensure the given task.
+Option D is correct. Go to dev.powerbi.com/apps and register an application is the right solution to ensure the given task.
+15. Question
+Which of the following cant be seen from the data lineage view in Power BI?
+•	 A. Where the dataflows are being utilized as a data source for datasets
+•	 B. The data sources that are being utilized by the dashboards/reports/datasets in a workspace
+•	 C. The credentials utilized to connect to datasets
+•	 D. Where gateways are being utilized as a data source for datasets
+The data lineage view does not display the credentials utilized to connect to datasets. This view shows the data sources that are being utilized by dashboards/reports/datasets in a workspace and where gateways or dataflows are utilized.
+Option A is incorrect. In the data lineage view, it is possible to see where the dataflows are being utilized as a data source for datasets.
+Option B is incorrect. In the data lineage view, it is possible to see the data sources that are being utilized by the dashboards/reports/datasets in a workspace.
+Option C is correct. In the data lineage view, it is not possible to see the credentials utilized to connect to datasets.
+Option D is incorrect. In the data lineage view, it is possible to see where the gateways are being utilized as a data source for datasets.
+16. Question
+You want to calculate/ return the last day of the month in the BS data to make sure that the BS data can be related to the Date table. Which of the following type of calculations would you use?
+•	 A. A DAX calculated column
+•	 B. A DAX calculated measure
+•	 C. An M custom column
+•	 D. None of the above
+•	Calculated column: A calculated column is added to an existing table and creates a new column based on existing columns in the same table. This is ideal for creating a new column that directly relates to the existing BS data.
+•	Direct relation: By creating a calculated column in the BS data table, you can directly link the last day of the month to the BS data, ensuring a strong connection with the Date table.
+•	Efficiency: Using a calculated column is generally more efficient than other methods, as the calculation is performed only once when the data is refreshed.
+While a DAX calculated measure could be used to calculate the last day of the month for a specific context, a calculated column provides a more direct and efficient way to relate the BS data to the Date table.
+17. Question
+Microsoft Information Protection sensitivity labels allow the users to classify the sensitive/critical content in Power BI without affecting the productivity or the collaborating ability.
+These Sensitivity labels can be applied to which of the following items in Power BI Service?
+•	 A. Only datasets
+•	 B. Only reports
+•	 C. Only dashboards
+•	 D. Only dataflows
+•	 E. Only datasets and reports
+•	 F. All including reports, datasets, dataflows, and dashboards
+In the Power BI service, you can apply sensitivity labels to reports, datasets, dataflows, and dashboards. When the labeled data exits from Power BI, either through export to PowerPoint, PDF, Excel, or .pbix files, or through other supported mechanisms, labels are automatically applied by Power BI to the exported file, and also it is protected as per the file encryption settings of the label.
+Option A is incorrect. In the Power BI service, you can apply sensitivity labels to reports, datasets, dataflows, and dashboards.
+Option B is incorrect. In the Power BI service, you can apply sensitivity labels to reports, datasets, dataflows, and dashboards, not only reports.
+Option C is incorrect. In the Power BI service, besides the dashboard, you can apply sensitivity labels to reports, datasets, and dataflows also.
+Option D is incorrect. In the Power BI service, you can apply sensitivity labels to reports, datasets, dataflows, and dashboards.
+Option E is incorrect. Besides, datasets and reports, you can apply sensitivity labels to dataflow and dashboard as well.
+Option F is correct. In the Power BI service, you can apply sensitivity labels to reports, datasets, dataflows, and dashboards.
+18. Question
+As only a limited number of summaries can be created, Smart Narratives considers only the most interesting stuff to summarize for the visual.  Complete the sentence below by filling in the blanks.
+Smart Narratives can create up to _______ summaries per visual and up to ______ summaries per page.
+•	 A. 1, 2
+•	 B. 1, 4
+•	 C. 4,1
+•	 D. 4, 16
+•	 E. 2, 8
+As only a limited number of summaries can be created, Smart Narratives considers only the most interesting stuff to summarize for the visual. Smart Narratives can generate up to 4 summaries per visual and up to 16 summaries per page.
+Option A is incorrect. Smart Narratives can generate up to 4 summaries per visual and up to 16 summaries per page.
+Option B is incorrect. Smart Narratives can generate up to 4 summaries per visual and up to 16 summaries per page.
+Option C is incorrect. 4,1 is not the right answer.
+Option D is correct.  Smart Narratives can generate up to 4 summaries per visual and up to 16 summaries per page.
+Option E is incorrect. The given option is incorrect.
+19. Question
+While creating visuals for your Power BI dashboards, there is an opportunity to break down your visuals into slices called small multiples.
+Which of the following options cover the full list of visuals supporting small multiples?
+•	 A. Bar, column and line
+•	 B. Doughnut, bar, area and line
+•	 C. Bar, column, area and line
+•	 D. Pie, doughnut, bar, line
+Option A is incorrect because, in addition to the visuals listed, the area chart also supports creating small multiples.
+Option B is incorrect because  the small multiples option is currently not available for doughnut charts.
+Option C is CORRECT because small multiples chart can currently been creatine on bar, column, line and area visuals.
+Option D is incorrect because creating small multiples is currently not available for pie or doughnut charts.
+20. Question
+For your Power BI dashboard, you have just created a pie chart visualizing the actual sales figures by region for the last year. In order to give decision makers a deeper insight, you want to extend the visual with a breakdown by countries. You decide to use the small multiples feature as a comfortable way of exploding visuals by a given dimension.
+Is it a feasible solution?
+•	 A. Yes
+•	 B. No
+Option A is incorrect because the small multiples option is currently available for bar, column, area and line visuals, only.
+Option B is CORRECT because enhancing the pie chart visual with small multiples is currently not supported in Power BI.
+21. Question
+You have just created a bar chart visualizing the actual sales figures by region for the past years. In order to give decision makers a deeper insight, you want to extend the visual with a breakdown by countries using the small visuals feature, and you also want to enhance it by showing the trend lines.
+Is it a feasible way of solving the problem?
+•	 A. Yes because all the formatting options available for visuals also work for small multiples
+•	 B. No because adding trend lines to small multiples charts is currently not available
+•	 C. Yes because while many formatting options doesnt work for small multiples, trend lines can be applied with no limitation
+•	 D. No because bar charts cannot be broken down into small multiples
+While you can generally create small multiples from bar charts to break down data by country, directly adding trend lines to each individual small multiple is not currently a standard feature in most data visualization tools.
+•	Small Multiples: These effectively create multiple, smaller versions of the main chart, each focusing on a specific subset of the data (in this case, each country within a region).
+•	Trend Lines: These are lines that show the general direction and rate of change of a dataset over time.
+Limitations:
+•	Tool-Dependent: The specific capabilities of your visualization software will determine if you can directly add trend lines to each small multiple. Some tools might offer workarounds or extensions to achieve this.
+•	Visual Complexity: Adding trend lines to many small multiples can sometimes make the visualization overly complex and difficult to interpret, especially if the number of countries within each region is large.
+Possible Workarounds:
+•	Separate Trend Lines: You could create a separate line chart for each country to visualize trends alongside the original bar chart.
+•	Conditional Formatting: Some tools might allow you to apply conditional formatting to the bars in each small multiple to visually highlight trends (e.g., color-coding bars based on whether sales are increasing or decreasing).
+In summary: While the concept of breaking down a bar chart into small multiples and adding trend lines is generally sound, direct implementation might be limited by the capabilities of your visualization software.
+22. Question
+You are creating a dashboard by using the Power BI service. You have an existing report page that contains three charts. You need to add the charts to the dashboard while maintaining the interactivity between the charts. What should you do?
+•	 A. Edit interactions in the report and set all interactions to Filter.
+•	 B. Pin each chart as a tile.
+•	 C. Edit the dashboard theme and pin each chart as a tile.
+•	 D. Pin the report page as a live tile.
+•	
+•	**Reason on that page. When you interact with a chart on the dashboard, the changes will be reflected in all the charts on the pinned report page.
+•	Pinning the entire report page as a live tile is an effective way to maintain interactivity between charts on a dashboard. When you pin an entire report page, it retains its interactive features, allowing users to interact with the visualizations just as they would in the original report. This means that filtering and cross-highlighting will work seamlessly across all visuals on that page.
+Incorrect Options:
+•	A. Edit interactions in the report and set all interactions to Filter:
+•	This approach would create cross-filtering between the charts on the report page, but it wouldn’t necessarily maintain the same level of interactivity as pinning the entire page.
+•	 While editing interactions in the report allows you to control how visuals interact with one another (e.g., filtering, highlighting), this step is not directly related to adding visuals to a dashboard. Interactions are configured within the report itself and do not carry over when you pin visuals to a dashboard. Therefore, this option does not address the requirement of adding charts to a dashboard while maintaining interactivity.
+•	B. Pin each chart as a tile:
+•	Pinning individual charts separately would break the existing interactivity between them on the report page. Each pinned chart would become an independent tile on the dashboard.
+•	 Pinning each chart as a tile is a valid method for adding visuals to a dashboard. However, when you pin individual charts, they do not maintain the same level of interactivity that exists in the report. The tiles on the dashboard serve as static representations of the charts and do not allow for cross-filtering or interactions between them as they would in the original report. Thus, while this option is technically correct for adding tiles, it does not fulfill the requirement of maintaining interactivity.
+•	C. Edit the dashboard theme and pin each chart as a tile:
+•	Changing the dashboard theme doesn’t affect the interactivity between charts. Pinning individual charts would still break the existing interactivity.
+•	This option suggests editing the dashboard theme before pinning charts as tiles. While you can customize the theme of a dashboard, this action does not contribute to maintaining interactivity between charts. Similar to option B, pinning charts as tiles will not preserve their interactive features from the report. Therefore, this option does not effectively address the requirement.
+23. Question
+You need to create a data model that includes multiple tables. Which tool should you use?
+•	 Power BI
+•	 Power Automate
+•	 Power Apps
+•	 Power Query
+Power BI is a business analytics service by Microsoft that provides interactive visualizations and business intelligence capabilities with an interface simple enough for end users to create their own reports and dashboards. It allows users to connect to multiple data sources, transform and clean the data, and create relationships between tables. Power BI also provides a data modeling feature that allows users to create a data model with multiple tables and define relationships between them. Therefore, Power BI is the most suitable tool for creating a data model with multiple tables. Power Automate, Power Apps, and Power Query are also part of the Power Platform by Microsoft, but they are not specifically designed for creating data models with multiple tables. Power Automate (formerly known as Microsoft Flow) is a cloud-based service that allows users to create automated workflows between different applications and services. It is used for automating repetitive tasks and integrating different systems. Power Apps is a low-code platform that allows users to create custom business applications without writing code. It provides a drag-and-drop interface for building user interfaces and connecting to data sources. Power Query is a data transformation and cleansing tool that is used to extract, transform, and load (ETL) data from different sources. It is a part of Microsoft Excel and Power BI, and it allows users to clean and transform data before loading it into a data model. However, it is not specifically designed for creating data models with multiple tables.“
+24. Question
+You want to show the relationship between two variables in a dataset. Which chart type would be best to use?
+•	 A. Scatter chart
+•	 B. Bar chart
+•	 C. Line chart
+•	 D. Pie chart
+“A. Scatter chart would be the best chart type to use to show the relationship between two variables in a dataset. Explanation: A scatter chart is used to display the relationship between two variables. It is a type of plot or mathematical diagram that uses Cartesian coordinates to display values for typically two variables for a set of data. The data is displayed as a collection of points, each having the value of one variable determining the position on the horizontal axis and the value of the other variable determining the position on the vertical axis. This type of chart is useful for identifying patterns and trends in the data, as well as for identifying outliers or unusual data points. B. Bar chart is used to compare different categories or groups of data. It is not suitable for showing the relationship between two variables. C. Line chart is used to show trends over time or continuous data. It is not suitable for showing the relationship between two variables. D. Pie chart is used to show the proportion of different categories or parts of a whole. It is not suitable for showing the relationship between two variables.“
+25. Question
+You are building a Power BI report. Users will view the report by using their mobile device. You need to configure the report to display data based on each user‘s location. Which two actions should you perform? Each correct answer presents part of the solution.NOTE: Each correct selection is worth one point.
+•	 A. From Power Query Editor, detect the data types of the relevant columns.
+•	 B. In Data Category, set the geographic data category for the relevant columns.
+•	 C. Create a hierarchy for columns of the geography data type.
+•	 D. Use the columns of the geography data type in all visuals.
+•	 E. For the relevant columns, set synonyms to match common geographical terms.
+“B and D are the correct propositions. Explanation: B. In Data Category, set the geographic data category for the relevant columns: This action is necessary to inform Power BI that the data in the relevant columns is geographic data. By setting the data category to geographic, Power BI will be able to recognize the data as such and use it to display location-based information. D. Use the columns of the geography data type in all visuals: This action is necessary to ensure that the location-based data is used in all visuals. By using the columns of the geography data type in all visuals, the report will be able to display location-based information in a consistent and meaningful way. A. From Power Query Editor, detect the data types of the relevant columns: This action is not necessary for configuring the report to display data based on each user‘s location. Detecting the data types of the relevant columns is useful for data cleaning and transformation, but it does not directly relate to location-based data. C. Create a hierarchy for columns of the geography data type: This action is not necessary for configuring the report to display data based on each user‘s location. Creating a hierarchy for columns of the geography data type is useful for organizing and displaying data in a hierarchical manner, but it does not directly relate to location-based data.“
+26. Question
+What is the difference between a shared and a personal workspace in Power BI?
+•	 Shared workspaces can be accessed by multiple users
+•	 Personal workspaces can only be accessed by the owner
+•	 Shared workspaces can be edited by multiple users
+•	 Personal workspaces can be shared with other users
+•	Explanation:
+•	A. Shared workspaces can be accessed by multiple users. This is correct. Shared workspaces are designed to be collaborative and can be accessed by multiple users within an organization. This allows for teamwork and shared insights.
+•	B. Personal workspaces can only be accessed by the owner. This is correct. Personal workspaces are private and can only be accessed by the user who created them. This provides a secure environment for personal work and experimentation.
+•	C. Shared workspaces can be edited by multiple users. This is correct. Shared workspaces allow multiple users to edit and modify reports and dashboards. This enables collaborative development and ensures that everyone is working on the same version.
+•	D. Personal workspaces can be shared with other users. This is incorrect. Personal workspaces are private and cannot be shared with other users. This is to protect the privacy and confidentiality of the data and work contained within the workspace.
+•	In summary, the key difference between shared and personal workspaces in Power BI is that shared workspaces are designed for collaboration and can be accessed and edited by multiple users, while personal workspaces are private and can only be accessed by the owner.
+27. Question
+How can you manage permissions for a workspace in Power BI?
+•	 Add or remove members
+•	 Assign roles to members
+•	 Set permissions for specific reports
+•	 Delete a workspace
+
+“All of the propositions are correct, but the most suitable or efficient proposition for managing permissions for a workspace in Power BI is to assign roles to members. Explanation: 1. Add or remove members: This proposition is correct because adding or removing members is a basic step in managing permissions for a workspace. However, it does not provide a granular level of control over what each member can do within the workspace. 2. Assign roles to members: This proposition is the most suitable or efficient because it allows you to assign specific roles to members, such as Admin, Member, or Contributor. Each role has a different level of permissions, which gives you more control over what each member can do within the workspace. 3. Set permissions for specific reports: This proposition is correct, but it is more focused on managing permissions for individual reports within a workspace, rather than managing permissions for the workspace as a whole. 4. Delete a workspace: This proposition is also correct, but it is not related to managing permissions for a workspace. Deleting a workspace is a separate action that should be taken only if you no longer need the workspace.“
+28. Question
+What is the purpose of the Power BI Gateway?
+•	 To allow users to connect to on-premises data sources
+•	 To allow users to create custom visuals
+•	 To allow users to share reports with others
+•	 To allow users to create dashboards
+“Proposition: To allow users to connect to on-premises data sources. Explanation: The Power BI Gateway is a tool that allows users to connect to on-premises data sources, such as databases or files, and securely transfer that data to the cloud-based Power BI service. This enables users to create reports and dashboards based on data that is stored locally, without having to manually upload or transfer the data to the cloud. The other propositions listed are not the primary purpose of the Power BI Gateway. While users can create custom visuals and share reports with others using Power BI, these features do not require the use of the Gateway. Similarly, while the Gateway can be used in conjunction with dashboards, its primary purpose is to enable data connectivity.“
+29. Question
+What is the purpose of the Power BI data model?
+•	 To provide a visual representation of data
+•	 To store data in a centralized location
+•	 To create reports and dashboards
+•	 To analyze data using DAX formulas
+
+•	To provide a visual representation of data: This is the purpose of visualizations like charts and graphs, not the data model itself.
+•	To create reports and dashboards: While the data model is essential for creating reports and dashboards, its primary purpose is to store and organize data.
+•	To analyze data using DAX formulas: DAX (Data Analysis Expressions) is a language used to create measures and calculations within the Power BI data model. However, the data model itself is the foundation for these calculations.
+Therefore, the correct answer is To store data in a centralized location.
+30. Question
+You have a project management app that is fully hosted in Microsoft Teams. The app was developed by using Microsoft Power Apps.You need to create a Power BI report that connects to the project management app.Which connector should you select?
+•	 A. Microsoft Teams Personal Analytics
+•	 B. SQL Server database
+•	 C. Dataverse
+•	 D. Dataflows
+Incorrect
+
+“C. Dataverse Explanation: The project management app was developed using Microsoft Power Apps, which means it is likely using Dataverse as its data source. Dataverse is a cloud-based data platform that allows you to securely store and manage data used by business applications. Since the app is fully hosted in Microsoft Teams, it makes sense to select the Dataverse connector to connect to the app‘s data source. Option A, Microsoft Teams Personal Analytics, is not the correct connector for this situation as it is used to analyze personal productivity data within Microsoft Teams, not to connect to a custom app‘s data source. Option B, SQL Server database, is not the correct connector for this situation as it is used to connect to a SQL Server database, which is not the data source for the project management app. Option D, Dataflows, is not the correct connector for this situation as it is used to extract, transform, and load data from various sources into a data warehouse or data lake, which is not necessary for connecting to the project management app‘s data source.“
+31. Question
+You have four sales regions. Each region has multiple sales managers.You implement row-level security (RLS) in a data model. You assign the relevant mail-enabled security group to each role.You have sales reports that enable analysis by region. The sales managers can view the sales records of their region. The sales managers are prevented from viewing records from other regions.A sales manager changes to a different region.You need to ensure that the sales manager can see the correct sales data.What should you do?
+•	 A. Change the Microsoft Power BI license type of the sales manager.
+•	 B. From Microsoft Power BI Desktop, edit the Row-Level Security setting for the reports.
+•	 C. Manage the permissions of the underlying dataset.
+•	 D. Request that the sales manager be added to the correct Azure Active Directory group.
+“D. Request that the sales manager be added to the correct Azure Active Directory group. Explanation: Since the sales manager has changed to a different region, their access to the sales data needs to be updated accordingly. The most efficient way to do this is to request that the sales manager be added to the correct Azure Active Directory group, which is assigned to the relevant role in the data model. This will ensure that the sales manager has access to the correct sales data based on their new region. Option A, changing the Microsoft Power BI license type of the sales manager, is not relevant to the situation as it does not address the issue of updating the sales manager‘s access to the correct sales data. Option B, editing the Row-Level Security setting for the reports from Microsoft Power BI Desktop, is also not the most efficient solution as it would require manual updates to the RLS settings for each report. It is better to update the sales manager‘s access at the role level in the data model. Option C, managing the permissions of the underlying dataset, is not the best solution as it would require updating the permissions for each dataset individually. It is better to update the sales manager‘s access at the role level in the data model. Therefore, option D is the correct and most efficient solution.“
